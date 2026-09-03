@@ -4,13 +4,18 @@ import './Country.css';
 
 export interface CountryProps {
   country: CountriesType;
+  handleVisitedCountry: (country: CountriesType) => void;
 }
 
-export default function Country({ country }: CountryProps) {
+export default function Country({
+  country,
+  handleVisitedCountry,
+}: CountryProps) {
   const [visited, setVisited] = useState<boolean>(false);
 
   const handleVisited = () => {
     setVisited(!visited);
+    handleVisitedCountry(country);
   };
 
   return (

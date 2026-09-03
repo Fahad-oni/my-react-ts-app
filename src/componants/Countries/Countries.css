@@ -3,3 +3,7 @@
   grid-template-columns: repeat(3,1fr);
   gap: 1rem;
 }
+.heading{
+  text-align: center;
+  font-size: 2rem;
+}
