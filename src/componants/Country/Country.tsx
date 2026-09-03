@@ -1,20 +1,28 @@
-
+import { useState } from 'react';
 import type { CountriesType } from './../../type';
-import './Country.css'
+import './Country.css';
 
 export interface CountryProps {
-  country: CountriesType
+  country: CountriesType;
 }
 
 export default function Country({ country }: CountryProps) {
+  const [visited, setVisited] = useState<boolean>(false);
+
+  const handleVisited = () => {
+    setVisited(!visited);
+  };
+
   return (
-    <div className="country">
+    <div className={`country ${visited ? 'country-visited' : ''}`}>
       <img src={country.flags.flags.png} alt={country.flags.flags.alt} />
       <h2>{country.name.common}</h2>
-      <p className='capital'>Capital: {country.capital.capital}</p>
+      <p className="capital">Capital: {country.capital.capital}</p>
       <p>Population: {country.population.population}</p>
       <p>Area: {country.area.area}</p>
-      <button>Visited</button>
+      <button onClick={handleVisited}>
+        {visited ? 'Visited' : 'Mark as visited'}
+      </button>
     </div>
   );
 }

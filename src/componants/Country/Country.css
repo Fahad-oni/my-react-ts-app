@@ -5,6 +5,10 @@
   padding: 1rem;
 }
 
+.country-visited {
+  background: linear-gradient(135deg, #c2f74e, #06c542);
+}
+
 .country img {
   width: 150px;
   margin-top: 8px;
@@ -28,4 +32,9 @@ button {
   background: linear-gradient(135deg, #1056c7, #81ce24);
   border: none;
   border-radius: 5px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #81ce24, #1056c7);
+  cursor: pointer;
 }
