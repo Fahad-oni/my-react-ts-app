@@ -1,0 +1,31 @@
+.country {
+  border: 2px solid green;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.country img {
+  width: 150px;
+  margin-top: 8px;
+}
+.country .capital {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 3px;
+}
+.country p {
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-top: 3px;
+}
+button {
+  padding: 0.4rem 0.6rem;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: aliceblue;
+  background: linear-gradient(135deg, #1056c7, #81ce24);
+  border: none;
+  border-radius: 5px;
+}
